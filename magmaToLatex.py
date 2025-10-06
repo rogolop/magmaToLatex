@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
 
+# Example usage:
+# ./magmaToLatex.py <testIn.txt >testOut.txt; less testOut.txt
+
 import re
 import sys
 
-#inStr = sys.stdin.read()
 
 #for line in sys.stdin:
 #	print(f'Input : {line}')
 
-# inStr = "942*t3*t22*x^19*y^22 + 942*t3*t22*x^19*y^22 + 942*t3*t22*x^19*y^22"
-# inStr = "(-3209472000/78961*t0^2*t72^9 + 9910947200/104939169*t72^12)/t0^26"
-# NinStr = "(175*t11^3 + 756*t11*t15 + 1944*t39)"
-# 
-# NinStr = """(21163161600*t0*t8 - 54419558400*t0*l1 - 
-#                                 4232632320*t8*l1 + 36515843*t11^6*l1 + 
-#                                 287862120*t11^4*t15*l1 + 410417280*t11^3*t39*l1 
-#                                 + 615625920*t11^2*t15^2*l1 + 1363848192*t11*t15\
-#                                 *t39*l1 + 227308032*t15^3*l1 + 846526464*t39^2*\
-#                                 l1 + 10883911680*l1^2)
-# 								"""
-# 
-inStr = r"""
+NinStr = "t3+y^12345"
+NinStr = "942*t3*t22*x^19*y^22 + 942*t3*t22*x^19*y^22 + 942*t3*t22*x^19*y^22"
+NinStr = "(-3209472000/78961*t0^2*t72^9 + 9910947200/104939169*t72^12)/t0^26"
+NinStr = "(175*t11^3 + 756*t11*t15 + 1944*t39)"
+NinStr = """(21163161600*t0*t8 - 54419558400*t0*l1 - 
+                                4232632320*t8*l1 + 36515843*t11^6*l1 + 
+                                287862120*t11^4*t15*l1 + 410417280*t11^3*t39*l1 
+                                + 615625920*t11^2*t15^2*l1 + 1363848192*t11*t15\
+                                *t39*l1 + 227308032*t15^3*l1 + 846526464*t39^2*\
+                                l1 + 10883911680*l1^2)
+								"""
+NinStr = r"""
   19 │  -38/66   =   -19/33 ┬ 
                                 (3*t0 - 1) or 
                                 (2178*t0*t4 - 726*t4 + 35*t7^4)
@@ -42,9 +43,8 @@ inStr = r"""
                                 (3*t0 - 1)
 
 """
-# 
-# inStr = "t3+y^12345"
 
+inStr = sys.stdin.read()
 
 
 
@@ -55,17 +55,25 @@ outStr = inStr
 # Remove newlines inside polynomials
 outStr= re.sub(r"\\\n[ \t]*", "", outStr)
 outStr = re.sub(r"\+[ \t]*\n[ \t]*", "+ ", outStr)
-outStr = re.sub(r"\-[ \t]*\n[ \t]*", "- ", outStr)
+outStr = re.sub(r"[ \t]*\n[ \t]*\+", " +", outStr)
+outStr = re.sub(r"(?<!\-)\-[ \t]*\n[ \t]*", "- ", outStr)
+outStr = re.sub(r"[ \t]*\n[ \t]*\-(?!\-)", " -", outStr)
 # Remove product signs
 outStr = outStr.replace("*", " ")
 # t1 -> t_1
-outStr = re.sub(r"([a-zA-Z])(\d)(?!\d)", r"\1_\2", outStr)
+outStr = re.sub(r"([a-zA-Z])(\d)(?!\d)[ ]*", r"\1_\2", outStr)
 # t12 -> t_{12}
-outStr = re.sub(r"([a-zA-Z])(\d\d+)", r"\1_{\2}", outStr)
+outStr = re.sub(r"([a-zA-Z])(\d\d+)[ ]*", r"\1_{\2}", outStr)
 # No space before exponentiation"
 outStr = re.sub(r"[ ]*\^", r"^", outStr)
 # ^12 -> ^{12}
 outStr = re.sub(r"\^(\d\d+)", r"^{\1}", outStr)
+# No space after exponent
+outStr = re.sub(r"(\^[\{\}\d]+)[ ]*", r"\1", outStr)
+# No space after number before monomial
+outStr = re.sub(r"(\d) ([a-zA-Z])", r"\1\2", outStr)
+# space after monomial
+outStr = re.sub(r"([a-zA-Z0-9\}])([+-]) ", r"\1 \2 ", outStr)
 
 print(outStr)
 
