@@ -48,34 +48,24 @@ inStr = r"""
 
 
 
-midStr = inStr
+outStr = inStr
 
-# Fix whitespace, remove "\", remove multiplication "*"
-midStr = midStr.replace("\n"," ")
-midStr = midStr.replace("\t"," ")
-midStr = midStr.replace("\\"," ")
-midStr = midStr.replace("*", " ")
-pattern = r"[ ]+"
-repl = r" "
-midStr = re.sub(pattern, repl, midStr)
-midStr = midStr.strip()
+#outStr= outStr.replace("\\\n","")
+
+# Remove newlines inside polynomials
+outStr= re.sub(r"\\\n[ \t]*", "", outStr)
+outStr = re.sub(r"\+[ \t]*\n[ \t]*", "+ ", outStr)
+outStr = re.sub(r"\-[ \t]*\n[ \t]*", "- ", outStr)
+# Remove product signs
+outStr = outStr.replace("*", " ")
 # t1 -> t_1
-pattern = r"([a-zA-Z])(\d)(?!\d)"
-repl = r"\1_\2"
-midStr = re.sub(pattern, repl, midStr)
+outStr = re.sub(r"([a-zA-Z])(\d)(?!\d)", r"\1_\2", outStr)
 # t12 -> t_{12}
-pattern = r"([a-zA-Z])(\d\d+)"
-repl = r"\1_{\2}"
-midStr = re.sub(pattern, repl, midStr)
-# No space before "^"
-pattern = r"[ ]*\^"
-repl = r"^"
-midStr = re.sub(pattern, repl, midStr)
+outStr = re.sub(r"([a-zA-Z])(\d\d+)", r"\1_{\2}", outStr)
+# No space before exponentiation"
+outStr = re.sub(r"[ ]*\^", r"^", outStr)
 # ^12 -> ^{12}
-pattern = r"\^(\d\d+)"
-repl = r"^{\1}"
-midStr = re.sub(pattern, repl, midStr)
+outStr = re.sub(r"\^(\d\d+)", r"^{\1}", outStr)
 
-outStr = midStr
 print(outStr)
 
