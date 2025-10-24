@@ -70,10 +70,12 @@ outStr = re.sub(r"[ ]*\^", r"^", outStr)
 outStr = re.sub(r"\^(\d\d+)", r"^{\1}", outStr)
 # No space after exponent
 outStr = re.sub(r"(\^[\{\}\d]+)[ ]*", r"\1", outStr)
-# No space after number before monomial
-outStr = re.sub(r"(\d) ([a-zA-Z])", r"\1\2", outStr)
+# Space after number before monomial
+outStr = re.sub(r"(\d) ([a-zA-Z])", r"\1\,\2", outStr)
 # space after monomial
 outStr = re.sub(r"([a-zA-Z0-9\}])([+-]) ", r"\1 \2 ", outStr)
+# Number fractions
+outStr = re.sub(r"(\d+)\/(\d+)", r"\\tfrac{\1}{\2}", outStr)
 
 print(outStr)
 
