@@ -60,6 +60,8 @@ outStr = re.sub(r"(?<!\-)\-[ \t]*\n[ \t]*", "- ", outStr)
 outStr = re.sub(r"[ \t]*\n[ \t]*\-(?!\-)", " -", outStr)
 # Remove product signs
 outStr = outStr.replace("*", " ")
+# A_12_34 -> A_{12,34}
+outStr = re.sub(r"([a-zA-Z])\_(\d+)\_(\d+)[ ]*", r"\1_{\2,\3}", outStr)
 # t1 -> t_1
 outStr = re.sub(r"([a-zA-Z])(\d)(?!\d)[ ]*", r"\1_\2", outStr)
 # t12 -> t_{12}
