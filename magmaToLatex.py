@@ -34,6 +34,8 @@ theString = re.sub(r"(\d) ([a-zA-Z])", r"\1\,\2", theString)
 theString = re.sub(r"([a-zA-Z0-9\}])([+-]) ", r"\1 \2 ", theString)
 # Number fractions
 theString = re.sub(r"(\d+)\/(\d+)", r"\\tfrac{\1}{\2}", theString)
+# Small numbers
+theString = re.sub(r"(?<![\{\^\_])([\n\t\ \(])(\d+)", r"\1{\\scriptstyle \2}", theString)
 
 print(theString)
 

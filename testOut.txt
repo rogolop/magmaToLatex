@@ -3,19 +3,19 @@ THIS CONTENT IS FOR TESTING FORMATTING ONLY
 ###########################################
 
 
-Magma V_2.28-6     Mon Oct  6 2025 13:29:36\,on emmy     [Seed = 4269085587]
+Magma V_2.28-6     Mon Oct  {\scriptstyle 6} {\scriptstyle 2025} {\scriptstyle 13}:29:36\,on emmy     [Seed = {\scriptstyle 4269085587}]
 Type ? for help.  Type <Ctrl>-D to quit.
 
 Loading file "main.m"
-Semigroup: [ 6, 14, 43 ]
+Semigroup: [ {\scriptstyle 6}, {\scriptstyle 14}, {\scriptstyle 43} ]
 Possible undeformed equations in space:
-Equation 1\,options:
+Equation {\scriptstyle 1}\,options:
 [ -u_0^7 + u_1^3
 ]
-Equation 2\,options:
+Equation {\scriptstyle 2}\,options:
 [ -u_0^5u_1^4 + u_2^2, -u_0^{12}u_1 + u_2^2
 ]
-Chosen equation indexes: [ 1, 1 ]
+Chosen equation indexes: [ {\scriptstyle 1}, {\scriptstyle 1} ]
 Chosen equations:
 [ -u_0^7 + u_1^3, -u_0^5u_1^4 + u_2^2
 ]
@@ -26,17 +26,17 @@ Usable deformation:
     u_2^2 - u_0^5u_1^4 + t_{17}u_0^3u_1^5
 ]
 Parameters:
-    Optional at E_1: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
-    Optional at E_2: [ 17 ]
-    Needed at E_1: 0
-Chosen parameters: [ 0, 17 ]
+    Optional at E_1: [ {\scriptstyle 1}, {\scriptstyle 2}, {\scriptstyle 3}, {\scriptstyle 4}, {\scriptstyle 5}, {\scriptstyle 6}, {\scriptstyle 7}, {\scriptstyle 8}, {\scriptstyle 9}, {\scriptstyle 10}, {\scriptstyle 11}, {\scriptstyle 12}, {\scriptstyle 13}, {\scriptstyle 14}, {\scriptstyle 15}, {\scriptstyle 16} ]
+    Optional at E_2: [ {\scriptstyle 17} ]
+    Needed at E_1: {\scriptstyle 0}
+Chosen parameters: [ {\scriptstyle 0}, {\scriptstyle 17} ]
 Chosen deformation:
 [ -u_0^7 + u_1^3 + t_0u_2, -u_0^5u_1^4 + t_{17}u_0^3u_1^5 + u_2^2
 ]
 
-Curve: 6-14-43
+Curve: {\scriptstyle 6}-14-43
 
-f = x^{14} - 2\,x^7y^3 - t_0^2x^5y^4 + t_0^2t_{17}x^3y^5 + y^6
+f = x^{14} - {\scriptstyle 2}\,x^7y^3 - t_0^2x^5y^4 + t_0^2t_{17}x^3y^5 + y^6
 
 
 -----------------------------------------------------------------------
@@ -53,7 +53,7 @@ Topological poles that coincide with 'non-topological' sigmas
 ZetaFunctionResidue
 ------------------------------
 Centering the singular point
-lambda = 1
+lambda = {\scriptstyle 1}
 
 ------------------------------
 ------------------------------
@@ -62,14 +62,14 @@ ZetaFunctionResidue
 sigma_{1,1}=-\tfrac{11}{42} -\tfrac{7}{32}\,t_0^2
 
 sigma_{2,2}=-\tfrac{23}{86}
-    (\tfrac{21}{530}\,t_0^2 + 2\,t_{17})/t_0^2
+    (\tfrac{21}{530}\,t_0^2 + {\scriptstyle 2}\,t_{17})/t_0^2
 
 sigma_{2,4}=-\tfrac{25}{86}
     (\tfrac{16709}{21242}\,t_0^4 + \tfrac{440}{43}\,t_0^2t_{17} + \tfrac{408}{43}\,t_{17}^2)/t_0^4
 
 sigma_{2,8}=-\tfrac{29}{86}
     (\tfrac{7367277645}{241939801}\,t_0^8 + \tfrac{49346496}{79507}\,t_0^6t_{17} + \tfrac{171752400}{79507}\,t_0^4t_{17}^2 - \tfrac{186157440}{79507}\,t_0^2t_{17}^3 + \tfrac{582906240}{79507}\,t_{17}^4)/t_0^8,
-    (5472\,t_0^2 + 40320\,t_{17})/t_0^8
+    ({\scriptstyle 5472}\,t_0^2 + {\scriptstyle 40320}\,t_{17})/t_0^8
 
 sigma_{2,10}=-\tfrac{31}{86}
     (\tfrac{15597826034175}{13996571294}\,t_0^{10} + \tfrac{2141999349750}{78632423}\,t_0^8t_{17} + \tfrac{531990180000}{3418801}\,t_0^6t_{17}^2 + \tfrac{99304833600}{3418801}\,t_0^4t_{17}^3 - \tfrac{536391072000}{3418801}\,t_0^2t_{17}^4 + \tfrac{1827623347200}{3418801}\,t_{17}^5)/t_0^{10},
@@ -77,14 +77,14 @@ sigma_{2,10}=-\tfrac{31}{86}
 
 sigma_{2,16}=-\tfrac{37}{86}
     (\tfrac{181572400712898718150753125}{1830017168366210858}\,t_0^{16} + \tfrac{9644311235367455446800000}{2636912346349007}\,t_0^{14}t_{17} + \tfrac{24678090514028488937400000}{556412696936029}\,t_0^{12}t_{17}^2 + \tfrac{104839336252700339209920000}{556412696936029}\,t_0^{10}t_{17}^3 + \tfrac{41918966914314409920000}{271818611107}\,t_0^8t_{17}^4 - \tfrac{1575345791260200960000}{271818611107}\,t_0^6t_{17}^5 + \tfrac{37614078276253839360000}{271818611107}\,t_0^4t_{17}^6 - \tfrac{186189167792431964160000}{271818611107}\,t_0^2t_{17}^7 + \tfrac{590998949897531535360000}{271818611107}\,t_{17}^8)/t_0^{16},
-    (-\tfrac{163895187456000}{23}\,t_0^2 + 20922789888000\,t_{17})/t_0^{16},
+    (-\tfrac{163895187456000}{23}\,t_0^2 + {\scriptstyle 20922789888000}\,t_{17})/t_0^{16},
     (\tfrac{5580122219113281840000}{762813135523}\,t_0^{10} + \tfrac{1192697878894441920000}{6998285647}\,t_0^8t_{17} + \tfrac{70135257830077440000}{78632423}\,t_0^6t_{17}^2 + \tfrac{245228174231040000}{3418801}\,t_0^4t_{17}^3 - \tfrac{3060742625740800000}{3418801}\,t_0^2t_{17}^4 + \tfrac{12326326897876992000}{3418801}\,t_{17}^5)/t_0^{16},
     (\tfrac{35954506748160000}{88021}\,t_0^4 + \tfrac{163895187456000}{43}\,t_0^2t_{17} + \tfrac{209227898880000}{43}\,t_{17}^2)/t_0^{16}
 
 
 Finished.
 
-Total time: 3.810\,seconds, Total memory usage: 32.09MB
+Total time: {\scriptstyle 3}.810\,seconds, Total memory usage: {\scriptstyle 32}.09MB
 
 
 _____________________________________________________________________
@@ -93,23 +93,23 @@ _____________________________________________________________________
 
 t_3+y^{12345}
 
-942\,t_3t_{22}x^{19}y^{22} + 942\,t_3t_{22}x^{19}y^{22} + 942\,t_3t_{22}x^{19}y^{22}
+{\scriptstyle 942}\,t_3t_{22}x^{19}y^{22} + {\scriptstyle 942}\,t_3t_{22}x^{19}y^{22} + {\scriptstyle 942}\,t_3t_{22}x^{19}y^{22}
 
 (-\tfrac{3209472000}{78961}\,t_0^2t_{72}^9 + \tfrac{9910947200}{104939169}\,t_{72}^{12})/t_0^{26}
 
-(175\,t_{11}^3 + 756\,t_{11}t_{15} + 1944\,t_{39})
+({\scriptstyle 175}\,t_{11}^3 + {\scriptstyle 756}\,t_{11}t_{15} + {\scriptstyle 1944}\,t_{39})
 
-(21163161600\,t_0t_8 - 54419558400\,t_0l_1 - 4232632320\,t_8l_1 + 36515843\,t_{11}^6l_1 + 287862120\,t_{11}^4t_{15}l_1 + 410417280\,t_{11}^3t_{39}l_1 + 615625920\,t_{11}^2t_{15}^2l_1 + 1363848192\,t_{11}t_{15}t_{39}l_1 + 227308032\,t_{15}^3l_1 + 846526464\,t_{39}^2l_1 + 10883911680\,l_1^2)
+({\scriptstyle 21163161600}\,t_0t_8 - {\scriptstyle 54419558400}\,t_0l_1 - {\scriptstyle 4232632320}\,t_8l_1 + {\scriptstyle 36515843}\,t_{11}^6l_1 + {\scriptstyle 287862120}\,t_{11}^4t_{15}l_1 + {\scriptstyle 410417280}\,t_{11}^3t_{39}l_1 + {\scriptstyle 615625920}\,t_{11}^2t_{15}^2l_1 + {\scriptstyle 1363848192}\,t_{11}t_{15}t_{39}l_1 + {\scriptstyle 227308032}\,t_{15}^3l_1 + {\scriptstyle 846526464}\,t_{39}^2l_1 + {\scriptstyle 10883911680}\,l_1^2)
 
-  19 │  -\tfrac{38}{66}   =   -\tfrac{19}{33} ┬ 
-                                (3\,t_0 - 1) or 
-                                (2178\,t_0t_4 - 726\,t_4 + 35\,t_7^4)
+  {\scriptstyle 19} │  -\tfrac{38}{66}   =   -\tfrac{19}{33} ┬ 
+                                ({\scriptstyle 3}\,t_0 - {\scriptstyle 1}) or 
+                                ({\scriptstyle 2178}\,t_0t_4 - {\scriptstyle 726}\,t_4 + {\scriptstyle 35}\,t_7^4)
      │                      │
-                                (3\,t_0 - 1) or 
-                                (2582935938\,t_0^3t_5 - 1721957292\,t_0^2t_1t_4 + 249043410\,t_0^2t_4^2t_7^2 - 260902620\,t_0^2t_4t_7^2 - 2582935938\,t_0^2t_5 + 166028940\,t_0^2t_7^3t_8 + 1147971528\,t_0t_1t_4 - 69178725\,t_0t_1t_7^4 - 166028940\,t_0t_4^2t_7^2 + 8741040\,t_0t_4t_7^6 + 173935080\,t_0t_4t_7^2 + 860978646\,t_0t_5 - 6708240\,t_0t_7^6 - 110685960\,t_0t_7^3t_8 - 191328588\,t_1t_4 + 23059575\,t_1t_7^4 + 27671490\,t_4^2t_7^2 - 2913680\,t_4t_7^6 - 28989180\,t_4t_7^2 - 95664294\,t_5 + 44720\,t_7^{10} + 2236080\,t_7^6 + 18447660\,t_7^3t_8)
+                                ({\scriptstyle 3}\,t_0 - {\scriptstyle 1}) or 
+                                ({\scriptstyle 2582935938}\,t_0^3t_5 - {\scriptstyle 1721957292}\,t_0^2t_1t_4 + {\scriptstyle 249043410}\,t_0^2t_4^2t_7^2 - {\scriptstyle 260902620}\,t_0^2t_4t_7^2 - {\scriptstyle 2582935938}\,t_0^2t_5 + {\scriptstyle 166028940}\,t_0^2t_7^3t_8 + {\scriptstyle 1147971528}\,t_0t_1t_4 - {\scriptstyle 69178725}\,t_0t_1t_7^4 - {\scriptstyle 166028940}\,t_0t_4^2t_7^2 + {\scriptstyle 8741040}\,t_0t_4t_7^6 + {\scriptstyle 173935080}\,t_0t_4t_7^2 + {\scriptstyle 860978646}\,t_0t_5 - {\scriptstyle 6708240}\,t_0t_7^6 - {\scriptstyle 110685960}\,t_0t_7^3t_8 - {\scriptstyle 191328588}\,t_1t_4 + {\scriptstyle 23059575}\,t_1t_7^4 + {\scriptstyle 27671490}\,t_4^2t_7^2 - {\scriptstyle 2913680}\,t_4t_7^6 - {\scriptstyle 28989180}\,t_4t_7^2 - {\scriptstyle 95664294}\,t_5 + {\scriptstyle 44720}\,t_7^{10} + {\scriptstyle 2236080}\,t_7^6 + {\scriptstyle 18447660}\,t_7^3t_8)
      │                      │
                                 (t_7) or 
-                                (3\,t_0 - 1)
+                                ({\scriptstyle 3}\,t_0 - {\scriptstyle 1})
 
 
 
